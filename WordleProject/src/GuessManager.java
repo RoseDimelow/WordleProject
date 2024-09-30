@@ -33,6 +33,8 @@ public class GuessManager
 			}
 						
 			guessCounter ++;
+			
+			//use guess counter in a loop as the row of the grid
 
 		}
 		
