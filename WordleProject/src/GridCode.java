@@ -24,7 +24,7 @@ public class GridCode
 		if (GuessManager.guessCounter > 0)
 		{
 			System.out.println("--------------------------");
-			System.out.println("| +" "+ | ++ | ++ | ++ | ++ |");
+			System.out.println("| "+ +" | "+ +" | "+ +" | "+ +" | "+ +" |");
 			System.out.println("--------------------------");
 			System.out.println("| ++ | ++ | ++ | ++ | ++ |");
 			System.out.println("--------------------------");
