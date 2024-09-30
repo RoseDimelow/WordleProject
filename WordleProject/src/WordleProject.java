@@ -2,13 +2,14 @@ import java.util.Scanner;
 
 public class WordleProject 
 {
+	static String [] wordList = {"AMBER", "AGILE", "BIOME", "BRISK", "COURT", "DEBUG", "FLOSS", "FORGE", "GLIDE", "GUPPY", "MAPLE", "SPELL", "TWIRL", "ZESTY", "RAINY", "QUERY"};
 
 	public static void main(String[] args) 
 	{
-		greetUser();
+//		greetUser();
 		GridCode.printGrid();
+		GuessManager.firstGuess();
 
-		String [] wordList = {"AMBER", "AGILE", "BIOME", "BRISK", "COURT", "DEBUG", "FLOSS", "FORGE", "GLIDE", "GUPPY", "MAPLE", "SPELL", "TWIRL", "ZESTY", "RAINY", "QUERY"};
 	}
 	
 	public static void greetUser()
@@ -38,7 +39,5 @@ public class WordleProject
 			System.out.println();	
 	}
 
-	//brainstorming:
-	//need: classes and matrix
-	//need: grid
+	
 }
