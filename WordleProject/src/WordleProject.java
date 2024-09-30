@@ -38,6 +38,7 @@ public class WordleProject
 		
 			System.out.println();	
 	}
-//hi
+//HAHAHA SUCCESSSSSSSSSSSSSSSSSSSSSSSSS
+//THE EAGLE HAS LANDED
 	
 }
