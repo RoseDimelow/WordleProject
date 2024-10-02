@@ -3,40 +3,51 @@ import java.util.Scanner;
 public class GuessManager 
 {
 	static int guessCounter = 1;
-	public static void firstGuess()
+	static int row = guessCounter-1;
+	
+	public static void chooseWordle()
 	{
-		System.out.println();
-		System.out.println("Type in your word guess!");
-				
-		int wordleIndex = (int) (Math.random()*17);
+		int wordleIndex = (int) (Math.random()*16);
 		
 		String wordle = WordleProject.wordList[wordleIndex];
+		
+		System.out.println(wordle);
+	}
+
+	public static void UserIsGuessing()
+	{
+		System.out.println();
+		System.out.println("Type in your word guess! 😀");
+				
+//		int wordleIndex = (int) (Math.random()*16);
+//		
+//		String wordle = WordleProject.wordList[wordleIndex];
+//		
+//		System.out.println(wordle);
 		
 		Scanner userInput = new Scanner(System.in);
 		
 		String userGuess = userInput.nextLine();
 		
+		//In the next code, the user's guess is split into single letters and inserted into grid matrix
 			
-		if (guessCounter == 1)
-		{
-			
+//		if (guessCounter == 1)
+//		{
 			String [] wordGoingInGrid = userGuess.split("");
-			for (int i = 0; i <= 4; i++)
-			{
-				
-				for (int col = 0; col < GridCode.grid[0].length; col++ )
+			
+			row = guessCounter-1;
+	
+				for (int col = 0; col < GridCode.grid[row].length; col++ )
 				{
-					GridCode.grid[0][col] = wordGoingInGrid[i];
-//					System.out.println(GridCode.grid[0][col]));
+					GridCode.grid[row][col] = wordGoingInGrid[col];
+//					System.out.println(GridCode.grid[row][col]);
 				}
-
-			}
 						
 			guessCounter ++;
 			
 			//use guess counter in a loop as the row of the grid
 
-		}
+//		}
 		
 	}
 

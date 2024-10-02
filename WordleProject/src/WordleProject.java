@@ -7,9 +7,20 @@ public class WordleProject
 	public static void main(String[] args) 
 	{
 //		greetUser();
-		GridCode.printGrid();
-		GuessManager.firstGuess();
-
+		GuessManager.chooseWordle();
+		GridCode.printEmptyGrid();
+		GuessManager.UserIsGuessing();
+		GridCode.printFirstGuess();
+		GuessManager.UserIsGuessing();
+		GridCode.printSecondGuess();
+		GuessManager.UserIsGuessing();
+		GridCode.printThirdGuess();
+		GuessManager.UserIsGuessing();
+		GridCode.printFourthGuess();
+		GuessManager.UserIsGuessing();
+		GridCode.printFifthGuess();
+		GuessManager.UserIsGuessing();
+		GridCode.printSixthGuess();
 	}
 	
 	public static void greetUser()
@@ -31,7 +42,7 @@ public class WordleProject
 		else if (userChoice.equals("B") || userChoice.equals("b"))
 		{
 			System.out.println("Here's how to play:");
-			System.out.println("You have to guess the wordle in 6 tries.");
+			System.out.println("You have to guess the 5-letter wordle in 6 tries.");
 			System.out.println("Letters from the word that you use as your guess can either be in the right place, the right letter in the wrong place, or completely wrong.");
 			System.out.println("Good luck!");
 		}
