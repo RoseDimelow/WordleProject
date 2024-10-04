@@ -4,14 +4,24 @@ public class GuessManager
 {
 	static int guessCounter = 1;
 	static int row = guessCounter-1;
+	static String staticWordle = chooseWordle();
 	
-	public static void chooseWordle()
+//	static	int wordleIndex = (int) (Math.random()*16);	
+//	static	String wordle = WordleProject.wordList[wordleIndex];
+//	static String [] splitWordle = wordle.split("");
+	
+	public static String chooseWordle()
 	{
+
 		int wordleIndex = (int) (Math.random()*16);
 		
 		String wordle = WordleProject.wordList[wordleIndex];
 		
 		System.out.println(wordle);
+		
+		String [] splitWordle = wordle.split("");
+		
+		return wordle;
 	}
 
 	public static void UserIsGuessing()
@@ -19,10 +29,6 @@ public class GuessManager
 		System.out.println();
 		System.out.println("Type in your word guess! 😀");
 				
-//		int wordleIndex = (int) (Math.random()*16);
-//		
-//		String wordle = WordleProject.wordList[wordleIndex];
-//		
 //		System.out.println(wordle);
 		
 		Scanner userInput = new Scanner(System.in);
