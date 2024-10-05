@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class WordleProject 
 {
-	static String [] wordList = {"AMBER", "AGILE", "BIOME", "BRISK", "COURT", "DEBUG", "FLOSS", "FORGE", "GLIDE", "GUPPY", "MAPLE", "SPELL", "TWIRL", "ZESTY", "RAINY", "QUERY"};
+	static String [] wordList = {"amber", "agile", "biome", "brisk", "court", "debug", "floss", "forge", "glide", "guppy", "maple", "spell", "twirl", "zesty", "rainy", "query"};
 
 	public static void main(String[] args) 
 	{
@@ -10,15 +10,22 @@ public class WordleProject
 		GuessManager.chooseWordle();
 		GridCode.printEmptyGrid();
 		GuessManager.UserIsGuessing();
+		CheckingAnswers.checkAnswers();
 		GridCode.printFirstGuess();
+		
 		GuessManager.UserIsGuessing();
+		CheckingAnswers.checkAnswers();
 		GridCode.printSecondGuess();
+		
 		GuessManager.UserIsGuessing();
 		GridCode.printThirdGuess();
+		
 		GuessManager.UserIsGuessing();
 		GridCode.printFourthGuess();
+		
 		GuessManager.UserIsGuessing();
 		GridCode.printFifthGuess();
+		
 		GuessManager.UserIsGuessing();
 		GridCode.printSixthGuess();
 	}

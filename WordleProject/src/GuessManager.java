@@ -6,13 +6,8 @@ public class GuessManager
 	static int row = guessCounter-1;
 	static String staticWordle = chooseWordle();
 	
-//	static	int wordleIndex = (int) (Math.random()*16);	
-//	static	String wordle = WordleProject.wordList[wordleIndex];
-//	static String [] splitWordle = wordle.split("");
-	
 	public static String chooseWordle()
 	{
-
 		int wordleIndex = (int) (Math.random()*16);
 		
 		String wordle = WordleProject.wordList[wordleIndex];
