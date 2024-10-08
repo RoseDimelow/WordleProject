@@ -1,41 +1,67 @@
 
 public class CheckingAnswers 
 {
-	static String [] letterStatus = new String [5];
+	static String[][] letterStatus = new String [6][5];
 
 	public static void checkAnswers()
 	{
 		String [] splitWordle = GuessManager.staticWordle.split("");
+		int letterCorrectCounter = 0;
+		
 		int letterCounter = 0;
 		
 		
 		for (int i = 0; i < 5; i++)
 		{
 			
-			System.out.println(splitWordle[i]);
+//			System.out.println(splitWordle[i]);
 			
-			//CASE: WHOLE WORD IS CORRECT
+			//CASE: LETTER IS CORRECT (THIS PART WORKS)
 			
 			if (splitWordle[i].equals(GridCode.grid[GuessManager.row][i]))
 			{
-				letterCounter++;
+				letterCorrectCounter++;
+				letterStatus [GuessManager.row][i] = "✔";
+			}
+	
+			//CASE: LETTER IS IN WRONG PLACE
+			
+			else if ((splitWordle[i]) != (GridCode.grid[GuessManager.row][i]))
+			{
+				letterCounter = 0;
+				for (int j = 0; j < 5; j++)
+				{
+					if (splitWordle[j].equals(splitWordle[i]))
+					{
+						letterCounter++;
+						System.out.println(letterCounter);
+					}
+				}
+				
+				//CASE: LETTER IS RIGHT BUT IN WRONG PLACE
+				
+				if (letterCounter != 0)
+				{
+					letterStatus [GuessManager.row][i] = "*";
+					//USE .contains() METHOD ON THE WORDLE AS A STRING
+				}
+				
+				//CASE: LETTER IS COMPLETELY WRONG
+				
+				else if (letterCounter == 0)
+				{
+					letterStatus [GuessManager.row][i] = "X";
+				}
+				
 			}
 			
-			if (letterCounter == 5)
+			//CASE: WHOLE WORD IS CORRECT
+			
+			if (letterCorrectCounter == 5)
 			{
 				System.out.println("Congrats! You guessed the wordle!");
-				//NEED TO END PROGRAM
-			}
-			
-			//CASE: LETTER IS WRONG
-			
-			if ((splitWordle[i]) != (GridCode.grid[GuessManager.row][i]))
-			{
-				letterStatus [i] = "X";
-			}
-			
-			//CASE: LETTER IS RIGHT BUT IN WRONG PLACE
-					
+				WordleProject.userIsPlaying = false;
+			}		
 			
 		}
 
