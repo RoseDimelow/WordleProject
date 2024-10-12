@@ -11,34 +11,47 @@ public class WordleProject
 //		GuessManager.chooseWordle();
 		
 		//NEED TO ADD A WHILE LOOP FOR WHILE THE USER IS PLAYING SO I CAN STOP THE GAME AT SPECIFIC PLACES IN OTHER METHODS
-		userIsPlaying = true;
+//		userIsPlaying = true;
+		//hi
 
-		while (userIsPlaying == true)
+		while (userIsPlaying = true)
 		{
 		GridCode.printEmptyGrid();
 		GuessManager.UserIsGuessing();
 		CheckingAnswers.checkAnswers();
 		GridCode.printFirstGuess();
+		CheckingAnswers.checkIfGameIsGoing();
+
 		
 		GuessManager.UserIsGuessing();
 		CheckingAnswers.checkAnswers();
 		GridCode.printSecondGuess();
+		CheckingAnswers.checkIfGameIsGoing();
+
 		
 		GuessManager.UserIsGuessing();
 		CheckingAnswers.checkAnswers();
 		GridCode.printThirdGuess();
+		CheckingAnswers.checkIfGameIsGoing();
+
 		
 		GuessManager.UserIsGuessing();
 		CheckingAnswers.checkAnswers();
 		GridCode.printFourthGuess();
+		CheckingAnswers.checkIfGameIsGoing();
+
 		
 		GuessManager.UserIsGuessing();
 		CheckingAnswers.checkAnswers();
 		GridCode.printFifthGuess();
+		CheckingAnswers.checkIfGameIsGoing();
+
 		
 		GuessManager.UserIsGuessing();
 		CheckingAnswers.checkAnswers();
 		GridCode.printSixthGuess();
+		CheckingAnswers.checkIfGameIsGoing();
+
 		}
 	}
 	

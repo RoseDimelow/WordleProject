@@ -31,25 +31,21 @@ public class GuessManager
 		String userGuess = userInput.nextLine();
 		
 		//In the next code, the user's guess is split into single letters and inserted into grid matrix
+
+		String [] wordGoingInGrid = userGuess.split("");
 			
-//		if (guessCounter == 1)
-//		{
-			String [] wordGoingInGrid = userGuess.split("");
-			
-			row = guessCounter-1;
+		row = guessCounter-1;
 	
-				for (int col = 0; col < GridCode.grid[row].length; col++ )
-				{
-					GridCode.grid[row][col] = wordGoingInGrid[col];
-//					System.out.println(GridCode.grid[row][col]);
-				}
+			for (int col = 0; col < GridCode.grid[row].length; col++ )
+			{
+				GridCode.grid[row][col] = wordGoingInGrid[col];
+//				System.out.println(GridCode.grid[row][col]);
+			}
 						
-			guessCounter ++;
+		guessCounter ++;
 			
 			//use guess counter in a loop as the row of the grid
 
-//		}
-		
 	}
 
 }

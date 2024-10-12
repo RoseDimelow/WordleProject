@@ -2,13 +2,14 @@
 public class CheckingAnswers 
 {
 	static String[][] letterStatus = new String [6][5];
+	static boolean userHasWon = false;
+
 
 	public static void checkAnswers()
 	{
 		String [] splitWordle = GuessManager.staticWordle.split("");
-		int letterCorrectCounter = 0;
 		
-		int letterCounter = 0;
+		int letterCounter = 0;	
 		
 		
 		for (int i = 0; i < 5; i++)
@@ -20,7 +21,7 @@ public class CheckingAnswers
 			
 			if (splitWordle[i].equals(GridCode.grid[GuessManager.row][i]))
 			{
-				letterCorrectCounter++;
+				letterCounter++;
 				letterStatus [GuessManager.row][i] = "✔";
 			}
 	
@@ -28,27 +29,17 @@ public class CheckingAnswers
 			
 			else if ((splitWordle[i]) != (GridCode.grid[GuessManager.row][i]))
 			{
-				letterCounter = 0;
-				for (int j = 0; j < 5; j++)
-				{
-					if (splitWordle[j].equals(splitWordle[i]))
-					{
-						letterCounter++;
-						System.out.println(letterCounter);
-					}
-				}
 				
-				//CASE: LETTER IS RIGHT BUT IN WRONG PLACE
-				
-				if (letterCounter != 0)
+			//CASE: LETTER IS RIGHT BUT IN WRONG PLACE
+
+				if (GuessManager.staticWordle.contains(GridCode.grid[GuessManager.row][i]))
 				{
 					letterStatus [GuessManager.row][i] = "*";
-					//USE .contains() METHOD ON THE WORDLE AS A STRING
 				}
 				
-				//CASE: LETTER IS COMPLETELY WRONG
+			//CASE: LETTER IS COMPLETELY WRONG
 				
-				else if (letterCounter == 0)
+				else
 				{
 					letterStatus [GuessManager.row][i] = "X";
 				}
@@ -57,17 +48,44 @@ public class CheckingAnswers
 			
 			//CASE: WHOLE WORD IS CORRECT
 			
-			if (letterCorrectCounter == 5)
+			if (letterCounter == 5)
 			{
 				System.out.println("Congrats! You guessed the wordle!");
+				userHasWon = true;
 				WordleProject.userIsPlaying = false;
-			}		
+			}	
+			
 			
 		}
+				
+//		if ((GuessManager.guessCounter >= 6) && (userHasWon = false))
+//		{
+//			System.out.println("Sorry, you have run out of guesses. Better luck next time!");
+//			WordleProject.userIsPlaying = false;
+//		}
+//		
+//		if (userHasWon = true)
+//		{
+//			WordleProject.userIsPlaying = false;
+//		}
 
+	}
+	
+	public static void checkIfGameIsGoing()
+	{
+		//ISSUE: COMPUTER IS IGNORING THESE LINES OF CODE:
+
+		if ((GuessManager.guessCounter >= 6) && (userHasWon = false))
+		{
+			System.out.println("Sorry, you have run out of guesses. Better luck next time!");
+			WordleProject.userIsPlaying = false;
+		}
+		
+		if (userHasWon = true)
+		{
+			WordleProject.userIsPlaying = false;
+		}
 	}
 
 }
 
-//to check the answer, use a for loop and have both the wordle and guess split up
-//compare letter by letter with if statements to see whether letters are = to each other
