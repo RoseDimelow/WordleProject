@@ -10,19 +10,19 @@ public class CheckingAnswers
 		String [] splitWordle = GuessManager.staticWordle.split("");
 		
 		int letterCounter = 0;	
-		
-		
+				
 		for (int i = 0; i < 5; i++)
 		{
 			
 //			System.out.println(splitWordle[i]);
 			
-			//CASE: LETTER IS CORRECT (THIS PART WORKS)
+			//CASE: LETTER IS CORRECT
 			
 			if (splitWordle[i].equals(GridCode.grid[GuessManager.row][i]))
 			{
 				letterCounter++;
-				letterStatus [GuessManager.row][i] = "✔";
+//				letterStatus [GuessManager.row][i] = "✔";
+				letterStatus [GuessManager.row][i] = "♥";
 			}
 	
 			//CASE: LETTER IS IN WRONG PLACE
@@ -52,22 +52,9 @@ public class CheckingAnswers
 			{
 				System.out.println("Congrats! You guessed the wordle!");
 				userHasWon = true;
-				WordleProject.userIsPlaying = false;
 			}	
-			
-			
+					
 		}
-				
-//		if ((GuessManager.guessCounter >= 6) && (userHasWon = false))
-//		{
-//			System.out.println("Sorry, you have run out of guesses. Better luck next time!");
-//			WordleProject.userIsPlaying = false;
-//		}
-//		
-//		if (userHasWon = true)
-//		{
-//			WordleProject.userIsPlaying = false;
-//		}
 
 	}
 	
@@ -75,15 +62,15 @@ public class CheckingAnswers
 	{
 		//ISSUE: COMPUTER IS IGNORING THESE LINES OF CODE:
 
-		if ((GuessManager.guessCounter >= 6) && (userHasWon = false))
+		if ((GuessManager.guessCounter == 7) && (! userHasWon))
 		{
 			System.out.println("Sorry, you have run out of guesses. Better luck next time!");
-			WordleProject.userIsPlaying = false;
+			System.exit(0);
 		}
 		
-		if (userHasWon = true)
+		if (userHasWon)
 		{
-			WordleProject.userIsPlaying = false;
+			System.exit(0);
 		}
 	}
 

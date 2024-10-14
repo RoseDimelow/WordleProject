@@ -3,56 +3,48 @@ import java.util.Scanner;
 public class WordleProject 
 {
 	static String [] wordList = {"amber", "agile", "biome", "brisk", "court", "debug", "floss", "forge", "glide", "guppy", "maple", "spell", "twirl", "zesty", "rainy", "query"};
-	static boolean userIsPlaying = true;
+
+	//NEED TO FIX THAT LETTERS ARE MARKED AS * REGARDLESS OF HOW MANY ARE IN THE WORD!
 
 	public static void main(String[] args) 
 	{
-//		greetUser();
-//		GuessManager.chooseWordle();
+		greetUser();
 		
-		//NEED TO ADD A WHILE LOOP FOR WHILE THE USER IS PLAYING SO I CAN STOP THE GAME AT SPECIFIC PLACES IN OTHER METHODS
-//		userIsPlaying = true;
-		//hi
-
-		while (userIsPlaying = true)
-		{
 		GridCode.printEmptyGrid();
-		GuessManager.UserIsGuessing();
+		GuessManager.userIsGuessing();
 		CheckingAnswers.checkAnswers();
-		GridCode.printFirstGuess();
+		GridCode.printFirstGuess();	
 		CheckingAnswers.checkIfGameIsGoing();
 
-		
-		GuessManager.UserIsGuessing();
+		GuessManager.userIsGuessing();
 		CheckingAnswers.checkAnswers();
 		GridCode.printSecondGuess();
 		CheckingAnswers.checkIfGameIsGoing();
 
 		
-		GuessManager.UserIsGuessing();
+		GuessManager.userIsGuessing();
 		CheckingAnswers.checkAnswers();
 		GridCode.printThirdGuess();
 		CheckingAnswers.checkIfGameIsGoing();
 
 		
-		GuessManager.UserIsGuessing();
+		GuessManager.userIsGuessing();
 		CheckingAnswers.checkAnswers();
 		GridCode.printFourthGuess();
 		CheckingAnswers.checkIfGameIsGoing();
 
 		
-		GuessManager.UserIsGuessing();
+		GuessManager.userIsGuessing();
 		CheckingAnswers.checkAnswers();
 		GridCode.printFifthGuess();
 		CheckingAnswers.checkIfGameIsGoing();
 
 		
-		GuessManager.UserIsGuessing();
+		GuessManager.userIsGuessing();
 		CheckingAnswers.checkAnswers();
 		GridCode.printSixthGuess();
 		CheckingAnswers.checkIfGameIsGoing();
 
-		}
 	}
 	
 	public static void greetUser()
@@ -76,7 +68,7 @@ public class WordleProject
 		{
 			System.out.println("Here's how to play:");
 			System.out.println("You have to guess the 5-letter wordle in 6 tries.");
-			System.out.println("Letters from the word that you use as your guess can either be in the right place, the right letter in the wrong place, or completely wrong.");
+			System.out.println("Letters from the word that you use as your guess can either be in the right place (♥), the right letter in the wrong place (*), or completely wrong (X).");
 			System.out.println("Good luck!");
 		}
 		

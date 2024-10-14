@@ -12,14 +12,14 @@ public class GuessManager
 		
 		String wordle = WordleProject.wordList[wordleIndex];
 		
-		System.out.println(wordle);
+//		System.out.println(wordle);
 		
 		String [] splitWordle = wordle.split("");
 		
 		return wordle;
 	}
 
-	public static void UserIsGuessing()
+	public static void userIsGuessing()
 	{
 		System.out.println();
 		System.out.println("Type in your word guess! 😀");

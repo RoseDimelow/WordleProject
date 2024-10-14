@@ -4,7 +4,7 @@ public class GridCode
 {
 	static String [][] grid = new String [6][5];
 	
-	//grids are all updated
+	//grids are all good to go
 
 	public static void printEmptyGrid()
 	{		
