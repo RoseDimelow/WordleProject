@@ -2,13 +2,14 @@ import java.util.Scanner;
 
 public class GuessManager 
 {
+//	System.out.println(WordleProject.wordList[3100]);
 	static int guessCounter = 1;
 	static int row = guessCounter-1;
 	static String staticWordle = chooseWordle();
 	
 	public static String chooseWordle()
 	{
-		int wordleIndex = (int) (Math.random()*16);
+		int wordleIndex = (int) (Math.random()*3101);
 		
 		String wordle = WordleProject.wordList[wordleIndex];
 		
