@@ -3106,8 +3106,6 @@ public class WordleProject
 			"zebra",
 			"zones"};
 
-	//NEED TO FIX THAT LETTERS ARE MARKED AS * REGARDLESS OF HOW MANY ARE IN THE WORD!
-
 	public static void main(String[] args) 
 	{
 		greetUser();
