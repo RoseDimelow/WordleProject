@@ -7,7 +7,7 @@ public class GridCode
 	//grids are all good to go
 
 	public static void printEmptyGrid()
-	{		
+	{
 		System.out.println("-----------------------------------------");
 		System.out.println("|       |       |       |       |       |");
 		System.out.println("-----------------------------------------");

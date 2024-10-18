@@ -60,7 +60,6 @@ public class CheckingAnswers
 	
 	public static void checkIfGameIsGoing()
 	{
-		//ISSUE: COMPUTER IS IGNORING THESE LINES OF CODE:
 
 		if ((GuessManager.guessCounter == 7) && (! userHasWon))
 		{
