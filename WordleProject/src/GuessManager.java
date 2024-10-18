@@ -28,6 +28,12 @@ public class GuessManager
 		
 		String userGuess = userInput.nextLine();
 		
+		if (userGuess.length() != 5)
+		{
+			System.out.println("Hey! That wasn't 5 letters long!");
+			System.exit(0);
+		}
+		
 		//In the next code, the user's guess is split into single letters and inserted into grid matrix
 
 		String [] wordGoingInGrid = userGuess.split("");

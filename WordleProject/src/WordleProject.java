@@ -3175,6 +3175,12 @@ public class WordleProject
 			System.out.println("Good luck!");
 		}
 		
+		else
+		{
+			System.out.println("Please restart and type in 'a' or 'b'.");
+			System.exit(0);
+		}
+		
 			System.out.println();	
 	}
 

@@ -8,6 +8,7 @@ public class GridCode
 
 	public static void printEmptyGrid()
 	{
+		
 		System.out.println("-----------------------------------------");
 		System.out.println("|       |       |       |       |       |");
 		System.out.println("-----------------------------------------");
@@ -25,6 +26,8 @@ public class GridCode
 	
 	public static void printFirstGuess()
 	{
+		System.out.println("* = wrong place     X = not in word    ♥ = right place");
+		
 		System.out.println("-----------------------------------------");
 		System.out.println("| "+grid[GuessManager.row][0]+" : "+CheckingAnswers.letterStatus[0][0]+" | "+grid[GuessManager.row][1]+" : "+CheckingAnswers.letterStatus[0][1]+" | "+grid[GuessManager.row][2]+" : "+CheckingAnswers.letterStatus[0][2]+" | "+grid[GuessManager.row][3]+" : "+CheckingAnswers.letterStatus[0][3]+" | "+grid[GuessManager.row][4]+" : "+CheckingAnswers.letterStatus[0][4]+" |");
 		System.out.println("-----------------------------------------");
@@ -42,7 +45,8 @@ public class GridCode
 	
 	public static void printSecondGuess()
 	{
-		//PRINTS OUT NULL FOR FIRST WORD
+		System.out.println("* = wrong place     X = not in word    ♥ = right place");
+
 		System.out.println("-----------------------------------------");
 		System.out.println("| "+grid[0][0]+" : "+CheckingAnswers.letterStatus[0][0]+" | "+grid[0][1]+" : "+CheckingAnswers.letterStatus[0][1]+" | "+grid[0][2]+" : "+CheckingAnswers.letterStatus[0][2]+" | "+grid[0][3]+" : "+CheckingAnswers.letterStatus[0][3]+" | "+grid[0][4]+" : "+CheckingAnswers.letterStatus[0][4]+" |");
 		System.out.println("-----------------------------------------");
@@ -60,6 +64,8 @@ public class GridCode
 	
 	public static void printThirdGuess()
 	{
+		System.out.println("* = wrong place     X = not in word    ♥ = right place");
+
 		System.out.println("-----------------------------------------");
 		System.out.println("| "+grid[0][0]+" : "+CheckingAnswers.letterStatus[0][0]+" | "+grid[0][1]+" : "+CheckingAnswers.letterStatus[0][1]+" | "+grid[0][2]+" : "+CheckingAnswers.letterStatus[0][2]+" | "+grid[0][3]+" : "+CheckingAnswers.letterStatus[0][3]+" | "+grid[0][4]+" : "+CheckingAnswers.letterStatus[0][4]+" |");
 		System.out.println("-----------------------------------------");
@@ -77,6 +83,8 @@ public class GridCode
 	
 	public static void printFourthGuess()
 	{
+		System.out.println("* = wrong place     X = not in word    ♥ = right place");
+
 		System.out.println("-----------------------------------------");
 		System.out.println("| "+grid[0][0]+" : "+CheckingAnswers.letterStatus[0][0]+" | "+grid[0][1]+" : "+CheckingAnswers.letterStatus[0][1]+" | "+grid[0][2]+" : "+CheckingAnswers.letterStatus[0][2]+" | "+grid[0][3]+" : "+CheckingAnswers.letterStatus[0][3]+" | "+grid[0][4]+" : "+CheckingAnswers.letterStatus[0][4]+" |");
 		System.out.println("-----------------------------------------");
@@ -94,6 +102,8 @@ public class GridCode
 	
 	public static void printFifthGuess()
 	{
+		System.out.println("* = wrong place     X = not in word    ♥ = right place");
+
 		System.out.println("-----------------------------------------");
 		System.out.println("| "+grid[0][0]+" : "+CheckingAnswers.letterStatus[0][0]+" | "+grid[0][1]+" : "+CheckingAnswers.letterStatus[0][1]+" | "+grid[0][2]+" : "+CheckingAnswers.letterStatus[0][2]+" | "+grid[0][3]+" : "+CheckingAnswers.letterStatus[0][3]+" | "+grid[0][4]+" : "+CheckingAnswers.letterStatus[0][4]+" |");
 		System.out.println("-----------------------------------------");
@@ -111,6 +121,8 @@ public class GridCode
 	
 	public static void printSixthGuess()
 	{
+		System.out.println("* = wrong place     X = not in word    ♥ = right place");
+
 		System.out.println("-----------------------------------------");
 		System.out.println("| "+grid[0][0]+" : "+CheckingAnswers.letterStatus[0][0]+" | "+grid[0][1]+" : "+CheckingAnswers.letterStatus[0][1]+" | "+grid[0][2]+" : "+CheckingAnswers.letterStatus[0][2]+" | "+grid[0][3]+" : "+CheckingAnswers.letterStatus[0][3]+" | "+grid[0][4]+" : "+CheckingAnswers.letterStatus[0][4]+" |");
 		System.out.println("-----------------------------------------");
