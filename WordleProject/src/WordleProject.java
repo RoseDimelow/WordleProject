@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
 public class WordleProject 
-{
+{ 
+	
 	static String [] wordList = {
 			"abaft",
 			"abase",
